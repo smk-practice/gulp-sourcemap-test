@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script type="text/javascript" src="dist/js/fizzbuzz.js"></script>
+    </head>
+    <button id="run">Run</button>
+    <script type="text/javascript">
+        (function() {
+            document.getElementById('run').addEventListener('click', function() {
+                fizzBuzz([[3 * 5, 'FizzBuzz'], [3, 'Fizz'],[5, 'Buzz']]);
+            });
+        })();
+    </script>
+</html>
