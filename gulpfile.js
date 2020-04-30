@@ -4,13 +4,10 @@ const ts = require('gulp-typescript');
 const serve = require('gulp-serve');
 const sourcemaps = require('gulp-sourcemaps');
 const browserify = require('gulp-browserify');
-const buffer = require('vinyl-buffer');
 
 gulp.task('build', function() {
     return gulp.src('src/**/*.ts')
-        .pipe(buffer())
-        .pipe(sourcemaps.init({largeFile: true}))
-        .pipe(sourcemaps.identityMap())
+        .pipe(sourcemaps.init())
         .pipe(ts())
         .pipe(babel({
             "presets": ['@babel/env']
